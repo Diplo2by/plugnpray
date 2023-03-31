@@ -1,20 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import ChartComponent from './ChartComponent'
 
 const user = {
   name: 'John doe',
   email: 'john@example.com',
-  imageUrl: 'https://i.imgur.com/QR1glVz.png'
+  imageUrl: 'https://i.imgur.com/QR1glVz.png',
+  reportid: 11
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   //   { name: 'Team', href: '#', current: false },
   //   { name: 'Projects', href: '#', current: false },
   //   { name: 'Calendar', href: '#', current: false },
-  { name: 'Download Report', href: '#', current: false },
+  { name: 'Download Report', href: '/reports/output12.pdf', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -182,6 +183,6 @@ export default function Example() {
           }</div>
         </main>
       </div>
-    </>
+    </> 
   )
 }
